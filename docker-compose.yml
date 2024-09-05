@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    #on-failure[:max-retries] 
+    restart: on-failure:10 
+    environment:
+      - POSTGRES_USER=TimeTracker
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=timetracker
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=xavier.celades@eurecat.org
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:

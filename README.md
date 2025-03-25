@@ -1,12 +1,8 @@
-This project is a full-stack web application that allows users to manage tasks with time tracking capabilities. It is built using FastAPI for the backend and React for the frontend. The tool includes features like task creation, editing, and tracking time spent on tasks, with additional features for analytics and visualizations.
+# React + Vite
 
-Technologies Used
-Backend: FastAPI with SQLite (optionally PostgreSQL for production) and SQLAlchemy as the ORM. User authentication is managed using JWT tokens, and the project includes API endpoints for tasks, time tracking, and productivity analytics.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Frontend: React with routing and UI components for task management and time tracking. It includes a Kanban board, timer controls, and data visualizations using libraries like Recharts or Chart.js.
+Currently, two official plugins are available:
 
-Deployment: Docker is used to containerize both the backend and frontend services, with a Docker Compose setup to manage the services. For database management, pgAdmin will be used to manage PostgreSQL tables in the production environment.
-
-Additional Tools: Redis for caching, Tailwind CSS for styling, and Websockets for real-time updates.
-
-This setup also supports continuous integration and deployment using tools like GitHub Actions or GitLab CI.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
